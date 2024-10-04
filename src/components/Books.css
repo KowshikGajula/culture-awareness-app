@@ -1,0 +1,250 @@
+    .book-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        background: linear-gradient(135deg, #07efef, #0ccfcf);
+        min-height: 100vh;
+        color: #fff;
+        font-family: 'Arial', sans-serif;
+        animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .book-title {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #fff;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        transform: scale(1);
+        animation: zoomIn 1s ease-in-out;
+    }
+
+    .book-image {
+        width: 300px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+        transition: transform 0.5s ease-in-out;
+        margin-bottom: 20px;
+        animation: slideIn 1.5s ease-in-out;
+    }
+
+    .book-image:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .book-description {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        text-align: center;
+        max-width: 800px;
+        margin-bottom: 20px;
+        padding: 0 20px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+        animation: fadeInUp 1.5s ease-in-out;
+        color: black; /* Ensure the text color is black */
+    }
+
+    .book-link {
+        font-size: 1.2rem;
+        color: #ffffff;
+        background-color: #ff4b2b;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s ease;
+        animation: bounceIn 2s ease-in-out;
+    }
+
+    .book-link:hover {
+        background-color: #ff5733;
+        text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+        transform: scale(1.05);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes zoomIn {
+        0% {
+            transform: scale(0.8);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes slideIn {
+        0% {
+            transform: translateX(-50px);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes bounceIn {
+        0%,
+        20%,
+        40%,
+        60%,
+        80%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    /* Book Grid Section */
+    .books-section {
+        margin-top: 50px;
+        padding: 20px;
+    }
+
+    .book-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .book-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: #f5f5f5;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .book-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .book-image {
+        width: 150px;
+        height: 200px;
+        object-fit: cover;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .book-card:hover .book-image {
+        transform: scale(1.1);
+    }
+
+    .book-card h3 {
+        color: black;
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
+    .book-card p {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.6;
+        margin: 10px 0;
+    }
+
+    .books-section h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 2rem;
+        color: #ff4500; /* Set the title to the desired orange color */
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .book-grid {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+
+        .book-card {
+            padding: 8px;
+        }
+
+        .book-image {
+            width: 120px;
+            height: 160px;
+        }
+
+        .book-card h3 {
+            font-size: 16px;
+        }
+    }
+.book-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: black; /* Keep text color black */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    transform: scale(1);
+    animation: zoomIn 1s ease-in-out;
+    position: relative; /* Position relative for the pseudo-element */
+    transition: background-color 0.3s ease; /* Add transition for background */
+}
+
+.book-title:hover {
+    background-color: rgba(255, 215, 0, 0.5); /* Attractive background on hover (gold color) */
+    border-radius: 5px; /* Optional: add some border radius */
+}
+
+/* Optional: Adding a pseudo-element for dynamic effect */
+.book-title::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 215, 0, 0.3); /* Background effect (gold color) */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Transition for opacity */
+    border-radius: 5px; /* Optional: border radius */
+}
+
+.book-title:hover::after {
+    opacity: 1; /* Show background effect on hover */
+}
+.book-description {
+    color: black; /* Ensure text color is black */
+}
+
+.book-description:hover {
+    color: black; /* Keep text color black on hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Optional: Add attractive background on hover */
+}

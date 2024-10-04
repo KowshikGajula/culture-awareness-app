@@ -1,0 +1,99 @@
+/* Global Styles */
+body {
+    background-color: #f4f2f2 !important; /* Ensure white background for the entire page */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-family: 'Lato', sans-serif; /* Use the same font family */
+}
+
+/* Travel Guide Section */
+.travel-guide {
+    padding: 40px;
+    background-color: #fbfbfe;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInTravelGuide 1.5s ease-in-out;
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Headings Style */
+  .travel-guide h2 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 36px;
+    margin-bottom: 40px;
+    animation: pulseTitle 1.5s infinite alternate;
+  }
+  
+  /* Travel Section */
+  .travel-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    animation: slideIn 1.2s ease-in-out;
+  }
+  
+  /* Image Styling */
+  .travel-image {
+    max-width: 40%;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+    box-shadow: 0 8px 16px rgba(18, 18, 18, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .travel-image:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Paragraph Styling */
+  .travel-section p {
+    font-size: 18px;
+    line-height: 1.8;
+    flex: 1;
+    color: #444;
+    animation: slideIn 1.2s ease-in-out;
+  }
+  
+  /* Animation: Slide-in Effect */
+  @keyframes slideIn {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Animation: Fade-in Effect for the Guide Section */
+  @keyframes fadeInTravelGuide {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Pulse Animation for the Title */
+  @keyframes pulseTitle {
+    0% {
+      color: #2c3e50;
+    }
+    100% {
+      color: #3498db;
+    }
+  }
+  
+  /* Hover Effects for Images */
+  .travel-image:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  }
+  

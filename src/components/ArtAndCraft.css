@@ -1,0 +1,116 @@
+/* Art and Craft Page Styling */
+.art-and-craft-container {
+    position: relative;
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+.art-and-craft-header {
+    text-align: center;
+    margin-bottom: 50px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.art-and-craft-header h1 {
+    font-size: 3.5rem;
+    color: #222;
+    font-family: 'Lora', serif;
+}
+
+.art-and-craft-header p {
+    font-size: 1.3rem;
+    color: #666;
+}
+
+/* Art and Craft Gallery */
+.art-and-craft-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.art-and-craft-card {
+    background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    animation: zoomIn 1.2s ease;
+}
+
+.art-and-craft-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.art-and-craft-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.art-and-craft-card h3 {
+    font-size: 1.8rem;
+    color: #444;
+}
+
+.art-and-craft-card p {
+    font-size: 1.1rem;
+    color: #777;
+}
+
+/* Search Bar Styling */
+.search-container {
+    position: absolute;
+    top: 170px; 
+    right: 20px; 
+    z-index: 10; 
+}
+
+.search-input {
+    padding: 8px 12px;
+    width: 200px; 
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #444;
+}
+
+.search-input::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* Keyframe Animations */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .search-container {
+        top: 10px;  
+        right: 10px; 
+    }
+
+    .search-input {
+        width: 150px; 
+    }
+}

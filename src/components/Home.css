@@ -1,0 +1,304 @@
+/* Home Page Styling */
+.home-container {
+  background-color: #333; /* Updated background color */
+  color: #fff; /* Adjust text color for better contrast */
+  padding: 20px; /* Add some padding */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+/* Full-screen Carousel */
+.carousel-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  overflow: hidden; /* Ensure content stays inside container */
+}
+
+.carousel-image {
+  width: 100%; /* Occupy 90% of the screen */
+  height: 80vh; /* Reduced height to 60% of viewport height */
+  object-fit: cover; /* Ensures the image maintains aspect ratio */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.carousel-image:hover {
+  transform: scale(1.05);
+}
+
+/* Arrow Button Styles */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+  z-index: 10; /* Ensures the arrows are always on top of the image */
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+.arrow:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Category Grid */
+.category-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px; /* Space above the grid */
+}
+
+/* Category Card Styling */
+.category-card {
+  background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 200px; /* Adjusted width for consistency */
+  text-align: center;
+  margin: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  animation: zoomIn 1.2s ease;
+}
+
+/* Additional styles as needed */
+.category-card h3 {
+  color: #333; /* Default text color */
+  transition: color 0.3s ease;
+}
+
+.category-card:focus h3,
+.category-card:active h3 {
+  color: #333; /* Keep text color the same on click */
+  outline: none; /* Remove default focus outline */
+}
+
+/* Optional: Add hover effect but keep text color the same */
+.category-card:hover h3 {
+  color: #333; /* Same color on hover */
+}
+
+.category-image {
+  width: 100%; /* Make the image take full width of the card */
+  height: 150px; /* Reduced height for better consistency */
+  object-fit: cover; /* Ensure the image scales properly without distortion */
+  border-radius: 8px; /* Apply some rounding to the corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.category-card:hover .category-image {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+.did-you-know {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.did-you-know h2 {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.freedom-image {
+  width: 300px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.freedom-image:hover {
+  transform: scale(1.05);
+}
+/* Story Grid Section */
+.stories-section {
+  margin-top: 50px;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.story-card {
+  cursor: pointer;
+  text-align: center;
+}
+
+.story-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.story-card:hover .story-image {
+  transform: scale(1.05);
+}
+
+.story-card h3 {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+.did-you-know {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.did-you-know h2 {
+  color: #ffdf00; /* Bright gold color to make it stand out */
+  font-size: 32px; /* Increase font size for more emphasis */
+  font-weight: bold; /* Make the text bold */
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.7); /* Glowing effect with shadow */
+  margin-bottom: 20px;
+  letter-spacing: 2px; /* Space out letters slightly */
+  animation: pulse 2s infinite; /* Add a pulse effect to grab attention */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); /* Slightly increase size during pulse */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* indian mythology css */
+/* Indian Mythology Books Section */
+.books-section {
+  margin-top: 50px;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  transition: transform 0.3s ease-in-out;
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+}
+
+.book-image {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.book-card h3 {
+  color: black; /* Changed the book title text color to black */
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.books-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+/* Want to Travel Section */
+.want-to-travel {
+  text-align: center;
+  margin-top: 40px;
+  animation: fadeInTravel 1.5s ease-in-out; /* Fade-in effect */
+}
+
+.want-to-travel h2 {
+  color: #fff;
+  font-size: 32px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  animation: pulseText 2s infinite; /* Text pulse animation */
+}
+
+/* Image Animation for Hover Effect */
+.travel-image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  animation: travelImageAnimation 2s ease-in-out; /* Initial travel image animation */
+}
+
+/* Image Hover Animation */
+.travel-image:hover {
+  transform: scale(1.1) rotate(3deg); /* Slight zoom and rotate on hover */
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Fade-in animation */
+@keyframes fadeInTravel {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pulse animation for the title */
+@keyframes pulseText {
+  0% {
+    color: #fff;
+  }
+  50% {
+    color: #f9c74f;
+  }
+  100% {
+    color: #fff;
+  }
+}
+
+/* Travel image animation (bounce effect) */
+@keyframes travelImageAnimation {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+

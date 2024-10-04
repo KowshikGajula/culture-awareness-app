@@ -1,0 +1,115 @@
+/* Calendar.css */
+.react-calendar {
+    width: 100%;
+    max-width: 500px; /* Increased width for better visibility */
+    margin: 20px auto;
+    border: 2px solid #ccc; /* Light gray border */
+    border-radius: 15px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow for depth */
+    background: #ffffff; /* White background for clarity */
+}
+
+/* General tile styling */
+.react-calendar__tile {
+    padding: 15px; /* Increased padding for larger click area */
+    text-align: center;
+    transition: background 0.3s ease, transform 0.2s; /* Smooth transitions */
+    border-radius: 8px; /* Rounded corners on tiles */
+    font-size: 1.5em; /* Larger font size for better readability */
+    color: #333; /* Dark color for dates */
+}
+
+/* Active day styling */
+.react-calendar__tile--active {
+    background: #007bff; /* Bright blue for active day */
+    color: white; /* White text for active day */
+    font-weight: bold; /* Bold text for emphasis */
+    transform: scale(1.05); /* Slightly enlarge active day */
+}
+
+/* Styling for tiles with events */
+.react-calendar__tile--hasEvent {
+    background: #ffecb3; /* Light yellow for event days */
+    color: #e67e22; /* Dark orange text for better visibility */
+}
+
+/* Custom styling for event days */
+.event-day {
+    background: #ff8c00; /* Orange color for event days */
+    color: white; /* White text for better contrast */
+    font-weight: bold; /* Bold text for event days */
+}
+
+/* Hover effects for event days */
+.event-day:hover {
+    background: #e67e22; /* Darker orange on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Style for other tiles on hover */
+.react-calendar__tile:hover {
+    background: #f0f0f0; /* Light gray on hover for all tiles */
+}
+
+/* Weekdays styling */
+.react-calendar__month-view__weekdays {
+    background-color: #007bff; /* Header background color */
+    color: white; /* White text for weekdays */
+    border-radius: 10px 10px 0 0; /* Rounded top corners */
+    padding: 15px 0; /* Increased padding for better look */
+    font-size: 1.3em; /* Larger font size for better readability */
+}
+
+/* Style for current month and year label */
+.react-calendar__navigation {
+    background-color: #f7f7f7; /* Light gray background for navigation */
+    border: none; /* Remove default border */
+    border-radius: 10px; /* Rounded corners for navigation */
+    margin: 10px 0; /* Spacing around navigation */
+    font-size: 1.5em; /* Larger font size for clarity */
+    color: #333; /* Dark text for contrast */
+}
+
+/* Style for the month-year button */
+.react-calendar__navigation button {
+    background-color: #007bff; /* Button background */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners for buttons */
+    padding: 10px; /* Padding for buttons */
+    font-size: 1em; /* Font size for buttons */
+    cursor: pointer; /* Pointer cursor for buttons */
+}
+
+/* Button hover effect */
+.react-calendar__navigation button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Style for today's date highlight */
+.react-calendar__tile--now {
+    background: #1abc9c; /* Teal color for today's date */
+    color: white; /* White text for today's date */
+    border-radius: 50%; /* Make today’s tile circular */
+    transform: scale(1.05); /* Slightly enlarge today’s date */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+/* Style for the event details section */
+.event-details {
+    font-size: 1.2em; /* Larger font size for event details */
+    color: #333; /* Dark text color for readability */
+    margin-top: 15px; /* Spacing above event details */
+    text-align: center; /* Centered text */
+}
+
+/* Darker months and years styling */
+.react-calendar__month-view__months {
+    color: #4a4a4a; /* Dark gray color for months */
+    font-size: 1.5em; /* Increased font size for months */
+}
+
+.react-calendar__month-view__years {
+    color: #4a4a4a; /* Dark gray color for years */
+    font-size: 1.5em; /* Increased font size for years */
+}

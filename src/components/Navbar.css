@@ -1,0 +1,101 @@
+/* Navbar Styles */
+.navbar {
+    background: linear-gradient(135deg, #222, #2a2a2a); /* Gradient for depth */
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Elevated shadow */
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar:hover {
+    background: linear-gradient(135deg, #333, #3b3b3b); /* Darker gradient on hover */
+  }
+  
+  .logo {
+    font-size: 2.5rem;
+    color: #ff9800; /* Bright orange */
+    font-family: 'Playfair Display', serif;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .logo:hover {
+    transform: scale(1.1);
+    color: #ff5722; /* Orange-red transition */
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+  
+  .nav-item {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-item::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #ff9800;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-item:hover {
+    color: #ff9800;
+  }
+  
+  .nav-item:hover::after {
+    width: 100%;
+  }
+  /* Styles for Login and SignUp links in the navbar */
+.nav-links li a {
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+  padding: 5px 0;
+}
+
+/* Hover effect for Login and SignUp links */
+.nav-links li a:hover {
+  color: #ff9800; /* Matches the hover color of other links */
+}
+
+.nav-links li a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #ff9800; /* Underline hover effect */
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Styles for Login and SignUp button-like appearance */
+.nav-links li a.login, 
+.nav-links li a.signup {
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: rgba(255, 152, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.nav-links li a.login:hover, 
+.nav-links li a.signup:hover {
+  background-color: rgba(255, 152, 0, 0.3); /* Button hover effect */
+}
