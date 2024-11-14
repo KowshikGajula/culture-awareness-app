@@ -1,0 +1,169 @@
+.quiz-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #f0f0f0, #e0f7fa);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.quiz-container::before,
+.quiz-container::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+    animation: float 6s ease-in-out infinite;
+}
+
+.quiz-container::before {
+    width: 300px;
+    height: 300px;
+    background: #ffd54f;
+    top: -100px;
+    left: -100px;
+}
+
+.quiz-container::after {
+    width: 250px;
+    height: 250px;
+    background: #ff8a65;
+    bottom: -100px;
+    right: -100px;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(15px); }
+}
+
+.result-title, .question-number, .previous-results-title {
+    color: #000;
+    font-weight: 700;
+    font-size: 1.8em;
+    letter-spacing: 0.05em;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.result-score, .question-text {
+    color: #000;
+    font-size: 1.4em;
+    font-weight: 500;
+    margin-top: 10px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.previous-results {
+    margin-top: 20px;
+    color: #555;
+}
+
+.previous-result-item, .no-results {
+    font-size: 1.1em;
+    color: #000;
+    margin: 8px 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.form-control {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.radio-group .MuiFormControlLabel-root {
+    color: #000;
+    margin: 12px 0;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.radio-group .MuiFormControlLabel-root:hover {
+    color: #1976d2;
+}
+
+.next-button, .submit-button, .restart-button {
+    background-color: #1976d2;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 12px 24px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.next-button:hover, .submit-button:hover, .restart-button:hover {
+    background-color: #1565c0;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.previous-results-title {
+    margin-top: 30px;
+}
+
+.previous-result-item {
+    color: #333;
+    margin-top: 8px;
+}
+
+@media (max-width: 600px) {
+    .quiz-container {
+        padding: 20px;
+    }
+
+    .result-title, .question-number, .previous-results-title {
+        font-size: 1.6em;
+    }
+
+    .result-score, .question-text {
+        font-size: 1.3em;
+    }
+
+    .next-button, .submit-button, .restart-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
+/* Timer styling */
+.timer {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #4caf50; /* Start with green */
+    transition: color 0.5s ease;
+}
+
+/* Transition colors as time decreases */
+.timer.time-warning {
+    color: #ff9800; /* Orange for middle range */
+}
+
+.timer.time-critical {
+    color: #f44336; /* Red for last few seconds */
+    animation: pulse 0.5s infinite; /* Pulsing effect */
+}
+
+/* Pulsing animation */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Update other quiz-container styles as needed */

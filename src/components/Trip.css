@@ -1,0 +1,193 @@
+/* General container styling */
+.trip-container {
+    padding: 80px 40px; /* Increased padding for a grander look */
+    background: linear-gradient(135deg, #e6f0ff, #f0f4f8); /* Subtle gradient background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    text-align: center;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Main heading styling */
+.trip-container h1 {
+    font-size: 4em; /* Prominent title size */
+    color: #1e90ff; /* Vibrant blue for visibility */
+    margin-bottom: 60px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: fadeInTitle 1.5s ease-out;
+}
+
+/* Trip card styling */
+.trip-card {
+    border: 1px solid #ddd;
+    border-radius: 20px; /* Sleek rounded corners */
+    padding: 40px;
+    margin: 40px 0;
+    width: 80%; /* Occupy more screen space */
+    max-width: 1000px;
+    text-align: left;
+    background-color: #fff;
+    color: #111; /* Dark text */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    animation: fadeInCard 1s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transform: translateY(20px);
+}
+
+/* Hover effect for trip cards */
+.trip-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* Trip title styling */
+.trip-card h2 {
+    font-size: 2.5em; /* Large trip titles */
+    color: #333;
+    font-weight: 600;
+    animation: fadeIn 1.2s ease;
+    margin-bottom: 20px;
+}
+
+/* Text styling for trip details */
+.trip-card p {
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.7;
+    margin: 15px 0;
+    animation: fadeInText 1.2s ease;
+}
+
+/* Link styling for website */
+.trip-card a {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 1.2em;
+}
+
+.trip-card a:hover {
+    color: #0056b3;
+}
+
+/* Image styling with animation */
+.trip-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 12px;
+    margin: 25px 0;
+    animation: zoomInImage 1.2s ease-out;
+    transition: transform 0.4s ease;
+}
+
+.trip-image:hover {
+    transform: scale(1.08);
+}
+
+/* Book button styling */
+.book-button {
+    background-color: #1e90ff;
+    color: #fff;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.3em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 25px;
+}
+
+.book-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.07);
+}
+
+/* Keyframe animations */
+@keyframes fadeInTitle {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInCard {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomInImage {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .trip-container {
+        padding: 40px 15px;
+    }
+
+    .trip-container h1 {
+        font-size: 2.8em;
+    }
+
+    .trip-card {
+        padding: 25px;
+    }
+
+    .trip-card h2 {
+        font-size: 2em;
+    }
+
+    .trip-card p {
+        font-size: 1em;
+    }
+
+    .trip-image {
+        max-width: 100%;
+    }
+
+    .book-button {
+        font-size: 1.1em;
+        padding: 12px 30px;
+    }
+}

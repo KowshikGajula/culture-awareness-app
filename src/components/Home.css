@@ -302,3 +302,122 @@
   }
 }
 
+/* Participate in Quiz Section */
+.participate-in-quiz {
+  text-align: center;
+  margin-top: 40px;
+  animation: fadeInQuiz 1.5s ease-in-out;
+}
+
+.participate-in-quiz h2 {
+  color: #ffd700;
+  font-size: 32px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  animation: pulseQuizText 2s infinite;
+}
+
+.emoji-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: bold;
+  animation: fadeInMessage 2s ease-in-out;
+}
+
+.quiz-text {
+  color: #f08a5d; /* Attractive color */
+  font-size: 18px;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.quiz-text:hover {
+  color: #ff6347; /* Change text color on hover */
+}
+
+.down-arrow {
+  font-size: 24px;
+  animation: bounceEmoji 1.5s infinite;
+}
+
+/* Image Animation */
+.quiz-image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out; /* Smooth zoom effect */
+  animation: quizImageAnimation 2s ease-in-out;
+}
+
+.quiz-image:hover {
+  transform: scale(1.08); /* Smooth zoom without movement */
+}
+
+/* Bounce animation for the down-arrow */
+@keyframes bounceEmoji {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+/* Fade-in Animation */
+@keyframes fadeInQuiz {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseQuizText {
+  0% {
+    color: #ffd700;
+  }
+  50% {
+    color: #ffa500;
+  }
+  100% {
+    color: #ffd700;
+  }
+}
+
+@keyframes quizImageAnimation {
+  0% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.home-container {
+  text-align: center;
+}
+
+.travel-image,
+.explore-trips-image {
+  width: 100%;
+  max-width: 400px;
+  cursor: pointer;
+  margin: 20px 0;
+  transition: transform 0.3s ease;
+}
+
+.travel-image:hover,
+.explore-trips-image:hover {
+  transform: scale(1.05);
+}
+
+.explore-trips-section {
+  margin-top: 40px;
+}

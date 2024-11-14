@@ -3,13 +3,13 @@ import './Monument.css';
 
 function Monument() {
   const monuments = [
-    { 
-      name: 'Taj Mahal', 
-      location: 'Agra, Uttar Pradesh', 
-      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOqIMxo0Zdt-mEwo56wVmJyJ9lcPip4YRefQ&s', 
-      story: 'The Taj Mahal, a symbol of love, was built by Mughal Emperor Shah Jahan in memory of his wife Mumtaz Mahal.', 
-      mapUrl: 'https://www.google.com/maps/place/Taj+Mahal/@27.1751448,78.0399535,17z' 
-    },
+      { 
+        name: 'Taj Mahal', 
+        location: 'Agra, Uttar Pradesh', 
+        imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOqIMxo0Zdt-mEwo56wVmJyJ9lcPip4YRefQ&s', 
+        story: 'The Taj Mahal, a symbol of love, was built by Mughal Emperor Shah Jahan in memory of his wife Mumtaz Mahal.', 
+        mapUrl: 'https://www.google.com/maps/place/Taj+Mahal/@27.1751448,78.0399535,17z' 
+      },
     { 
       name: 'Qutub Minar', 
       location: 'Delhi', 

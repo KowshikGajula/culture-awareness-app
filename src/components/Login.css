@@ -122,3 +122,20 @@ button:hover {
   background-color: #ff9800; /* Keep the hover effect the same */
   transform: scale(1.05); /* Slight scale on hover */
 }
+/* Prompt for signing up */
+.signup-prompt {
+  margin-top: 20px;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.signup-link {
+  color: #ff9800;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.signup-link:hover {
+  color: #ff5722;
+}

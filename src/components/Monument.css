@@ -332,7 +332,7 @@ h1 {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(242, 240, 240, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -347,7 +347,7 @@ h1 {
 }
 
 .modal-content {
-    background-color: #464645;
+    background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     position: relative;
@@ -387,191 +387,29 @@ h1 {
     text-decoration: none;
     color: #007BFF;
 }
-/* Modal Map Link */
-.modal-map-link {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: orange; /* Changed to orange */
-    color: #fff;
-    border-radius: 25px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.modal-map-link:hover {
-    background-color: darkorange; /* Optional hover color */
-}
-html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    box-sizing: border-box;
-}
-
-.monument-container {
-    min-height: 100vh; /* Ensure the container takes full height */
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px 0;
-    background-color: #fafafa;
-}
-
-/* Full-width grid for monuments */
-.monument-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    width: 100%;
-    padding: 0 20px;
-}
-
-.monument-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    width: 100%;
-}
-
-.monument-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.monument-image {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.monument-details {
-    padding: 15px;
-    background-color: #fff;
-    text-align: center;
-}
-
-.monument-name {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-.monument-location {
-    font-size: 14px;
-    color: #555;
-}
-
 /* Search Bar Styling */
 .search-container {
     position: absolute;
-    top: 20px; 
-    right: 30px;
+    top: 170px;
+    right: 20px;
     z-index: 10;
 }
 
 .search-input {
     padding: 8px 12px;
-    width: 250px;
+    width: 200px;
     border: 2px solid #ccc;
     border-radius: 25px;
     font-size: 1rem;
+    transition: all 0.3s ease;
     background-color: #f8f8f8;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #000; /* Set text color to black */
 }
 
-/* Modal Styling */
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(242, 240, 240, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease;
-    z-index: 1000;
-}
-
-.modal.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.modal-content {
-    background-color: #585858;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 500px;
-    width: 80%;
-    box-sizing: border-box;
-}
-
-.modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.modal-close {
-    cursor: pointer;
-    font-size: 20px;
-}
-
-.modal-image {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.modal-story {
-    margin: 10px 0;
-}
-
-.modal-map {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.modal-map-link {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: orange;
-    color: #fff;
-    border-radius: 25px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.modal-map-link:hover {
-    background-color: darkorange;
-}
-
-/* Responsiveness */
-@media (max-width: 768px) {
-    .monument-container {
-        padding: 30px 10px;
-    }
-
-    .monument-gallery {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
-
-    .search-input {
-        width: 200px;
-    }
+/* Ensure visibility when focused */
+.search-input:focus {
+    outline: none;
+    border-color: #888;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }

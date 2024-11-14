@@ -18,7 +18,7 @@ function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000);
+    }, 2000);
     return () => clearInterval(interval);
   }, [images.length]);
 
@@ -140,6 +140,32 @@ function Home() {
       {/* Other content can follow */}
       {/* Example: You can include your existing components or sections here */}
     </div>
+     {/* New "Participate in Quiz" section */}
+     <div className="participate-in-quiz">
+        <h2>Participate in Quiz</h2>
+        <div className="emoji-message">
+    <span className="down-arrow">👇</span>
+    Click to test your knowledge about our culture and historical places!
+   </div>
+        <img
+          src="https://gyanok.com/wp-content/uploads/2024/03/Art-and-Culture-of-India.jpg" // Replace this with an appropriate quiz-related image URL
+          alt="Quiz"
+          className="quiz-image"
+          onClick={() => navigate('/quiz')}
+        />
+        
+      </div>
+
+         {/* New "Explore Trips" section */}
+         <div className="explore-trips-section">
+                <h2>Explore Trips</h2>
+                <img
+                    src="https://c1.wallpaperflare.com/preview/542/649/89/passport-map-world-trip.jpg" // Replace with your desired image URL
+                    alt="Explore Trips"
+                    className="explore-trips-image"
+                    onClick={() => navigate('/trips')}
+                />
+            </div>
     </div>
     
   );

@@ -1,0 +1,188 @@
+/* General container styling */
+.trip-management-container {
+    padding: 40px;
+    background-color: #f5f8fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    text-align: center;
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    border: 1px solid #e1e4e8;
+}
+
+/* Header styling */
+.trip-management-container h1 {
+    font-size: 3em;
+    color: #1e90ff; /* Dark blue color */
+    margin-bottom: 25px;
+    animation: fadeIn 1s ease-in-out;
+    font-weight: 700; /* Bolder font */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Subheader styling */
+.trip-management-container h2 {
+    font-size: 2em;
+    color: #ff6600;
+    margin: 35px 0 20px;
+    font-weight: 500;
+}
+
+/* Input and text area styling */
+.trip-management-container input,
+.trip-management-container textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 15px;
+    margin: 10px auto;
+    border-radius: 8px;
+    border: 1px solid #bbb;
+    font-size: 1em;
+    background-color: #fafafa;
+    color: #333;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Focus state for input fields */
+.trip-management-container input:focus,
+.trip-management-container textarea:focus {
+    background-color: #e0f7fa;
+    border-color: #0073e6;
+    outline: none;
+}
+
+/* Textarea specific styling */
+.trip-management-container textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Button styling */
+.trip-management-container button {
+    background-color: #0073e6;
+    color: #fff;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button hover effect */
+.trip-management-container button:hover {
+    background-color: #005bb5;
+    transform: scale(1.07);
+}
+
+/* Response message styling */
+.response-message {
+    font-size: 1.2em;
+    margin-top: 25px;
+    color: #ff6600;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Trip card styling */
+.trip-card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 25px auto;
+    max-width: 700px;
+    text-align: left;
+    background-color: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for trip cards */
+.trip-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Styling for trip card images */
+.trip-image {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 15px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for images */
+.trip-image:hover {
+    transform: scale(1.1);
+}
+
+/* Keyframe animation for fadeIn effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .trip-management-container {
+        padding: 20px;
+    }
+
+    .trip-management-container input,
+    .trip-management-container textarea {
+        max-width: 100%;
+    }
+
+    .trip-card {
+        max-width: 100%;
+    }
+
+    .trip-image {
+        max-width: 100%;
+    }
+}
+
+/* Text alignment and spacing in trip cards */
+.trip-card h3,
+.trip-card p {
+    color: #333;
+}
+
+/* Button styling inside trip cards */
+.trip-card button {
+    background-color: #0073e6;
+    color: white;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for buttons inside trip cards */
+.trip-card button:hover {
+    background-color: #005bb5;
+    transform: scale(1.05);
+}
+
+/* Improved alignment for inputs and textareas */
+.trip-management-container input,
+.trip-management-container textarea {
+    display: block;
+    margin: 12px auto;
+    box-sizing: border-box;
+}

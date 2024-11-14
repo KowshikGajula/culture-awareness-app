@@ -17,6 +17,15 @@ import Books from './components/Books';
 import Navbar from './components/Navbar';
 import Home1 from './components/Home1';
 import Travel from './components/Travel';
+import Event from './components/Event'; // Import the Event component
+import AdminLogin from './components/AdminLogin';
+import AdminDashboard from './components/AdminDashboard'; 
+import Quiz from './components/Quiz';
+import EmailSender from './components/EmailSender';
+import TripManagement from './components/TripManagement';
+import Trip from './components/Trip';
+
+
 import './App.css';
 
 function App() {
@@ -48,6 +57,8 @@ function App() {
           <Route path="/" element={isLoggedIn ? <Home /> : <Home1 />} />
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/admin-login" element={<AdminLogin />} />
+          <Route path="/admin-dashboard" element={<AdminDashboard />} />
           <Route path="/home" element={<Home />} />
           <Route path="/monument" element={<Monument />} />
           <Route path="/heritage" element={<Heritage />} />
@@ -59,16 +70,17 @@ function App() {
           <Route path="/freedom" element={<Freedom />} />
           <Route path="/story/:placeId" element={<Story />} />
           <Route path="/books/:bookName" element={<Books />} />
-          <Route path="/travel" element={<Travel />} /> 
-          <Route path="/login" element={<Login />} /> {/* Login Route */}
-          <Route path="/signup" element={<Signup />} /> {/* Signup Route */}
+          <Route path="/travel" element={<Travel />} />
           <Route path="/about" element={<About />} />
+          <Route path="/event/:eventName" element={<Event />} /> {/* Add the Event.js Route */}
+          <Route path="/quiz" element={<Quiz />} /> {/* Correctly add the Quiz route */}
+          <Route path="/email-sender" element={<EmailSender />} /> {/* Add the EmailSender route */}
+          <Route path="/admin/trips" element={<TripManagement/>} />
+          <Route path="/trips" element={<Trip/>} />
         </Routes>
       </div>
     </Router>
   );
 }
-
-
 
 export default App;

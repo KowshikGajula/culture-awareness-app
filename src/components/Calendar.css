@@ -113,3 +113,23 @@
     color: #4a4a4a; /* Dark gray color for years */
     font-size: 1.5em; /* Increased font size for years */
 }
+/* Calendar.css */
+.event-day {
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 50%;
+  }
+  
+  .important-event {
+    background-color: #ff6347; /* Highlight important events and webinars in red */
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+  }
+  
+  .festival-event {
+    background-color: #ffd700; /* Highlight festivals in yellow */
+    color: black;
+    border-radius: 50%;
+  }
+  

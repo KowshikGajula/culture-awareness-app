@@ -13,7 +13,7 @@ function Festivals() {
   {
       name: 'Diwali',
       description: 'The festival of lights.',
-      imageUrl: 'https://www.hindubhagwan.com/Gallery/images/portfolio/full/small/Diwali_images.jpg',
+      imageUrl: 'https://media.istockphoto.com/id/588223710/photo/diwali-oil-lamp.jpg?s=612x612&w=0&k=20&c=Mwl1S6C-CemmHoDPx4kwE8XKNcRRlZLRmKkpdfkM4VU=',
       story: 'Diwali, the festival of lights, symbolizes the victory of light over darkness and knowledge over ignorance. People celebrate by lighting diyas, bursting crackers, and decorating their homes. It commemorates the return of Lord Rama to Ayodhya after 14 years of exile and the defeat of the demon king Ravana.'
   },
   {

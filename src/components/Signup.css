@@ -82,3 +82,30 @@
     padding: 30px;
   }
 }
+/* Input Group */
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  font-size: 1rem;
+  color: #333; /* Text color */
+  background-color: #fff; /* Input background color */
+  transition: border 0.3s ease;
+}
+
+.input-group input::placeholder {
+  color: #999; /* Placeholder color */
+}
+
+.input-group input:focus {
+  border: 1px solid #ff8a00;
+  outline: none;
+  color: #333; /* Text color when focused */
+  background-color: #fff; /* Keep background white when focused */
+}
+.error-message {
+  color: red;
+  font-size: 18px;
+  margin-top: 5px;
+}
