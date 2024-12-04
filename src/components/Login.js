@@ -1,29 +1,44 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import ReCAPTCHA from 'react-google-recaptcha';
 import './Login.css';
 
 function Login({ onLogin }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState({});
+  const [captchaToken, setCaptchaToken] = useState(null); // Store reCAPTCHA token
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validation
+    // Validate form inputs
     const validationErrors = {};
     if (username.length < 3) validationErrors.username = 'Username should be at least 3 characters long';
     if (password.length < 6) validationErrors.password = 'Password should be at least 6 characters long';
+
+    if (!captchaToken) {
+      validationErrors.captcha = 'Please complete the reCAPTCHA';
+    }
 
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
     }
 
-    const user = { username, password };
-
     try {
+      // Validate reCAPTCHA token with backend
+      const captchaResponse = await fetch('http://localhost:8080/api/recaptcha/validate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ token: captchaToken })
+      });
+      if (!captchaResponse.ok) {
+        throw new Error('Captcha validation failed');
+      }
+
+      const user = { username, password };
       const response = await fetch('http://localhost:8080/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -32,14 +47,10 @@ function Login({ onLogin }) {
 
       if (response.ok) {
         const data = await response.json();
-        if (data && data.userId) {
-          localStorage.setItem('userId', data.userId);
-          localStorage.setItem('token', data.token); // Store token if sent in the response
-          onLogin(); // Update authentication status
-          navigate('/home'); // Redirect to home page
-        } else {
-          console.warn("User ID not found in response");
-        }
+        localStorage.setItem('userId', data.userId);
+        localStorage.setItem('token', data.token);
+        onLogin();
+        navigate('/home');
       } else {
         alert('Invalid credentials');
       }
@@ -78,6 +89,11 @@ function Login({ onLogin }) {
             />
             {errors.password && <span className="error-message">{errors.password}</span>}
           </div>
+          <ReCAPTCHA
+            sitekey="6Lcmc34qAAAAAD6xPhHcJ1b_5XbhQRZoHVWkBed6"
+            onChange={(token) => setCaptchaToken(token)}
+          />
+          {errors.captcha && <span className="error-message">{errors.captcha}</span>}
           <button type="submit">Login</button>
         </form>
         <p className="signup-prompt">

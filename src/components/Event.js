@@ -79,7 +79,7 @@ const eventDetails = {
   },
   'World AIDS Day': {
     description: 'Awareness and support for people living with HIV.',
-    image: 'https://www.hiv.gov/static/0502632bf38a23606ba9914380d963ec/b74b1/awareness-box-worldaidsday.jpg', // Replace with the image link for the event
+    image: 'https://unimarckpharma.com/wp-content/uploads/2020/11/Unimarck_Pharma_World-AIDS-Day-Spreading-Awareness-about-HIV.jpg', // Replace with the image link for the event
     timing: '11:00 AM - 1:00 PM',
     place: 'Hyderabad',
     mode: 'Online',
