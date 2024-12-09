@@ -24,6 +24,9 @@ import Quiz from './components/Quiz';
 import EmailSender from './components/EmailSender';
 import TripManagement from './components/TripManagement';
 import Trip from './components/Trip';
+import VirtualTour from './components/VirtualTour'; // Import the VirtualTour componen
+
+
 
 
 import './App.css';
@@ -77,6 +80,7 @@ function App() {
           <Route path="/email-sender" element={<EmailSender />} /> {/* Add the EmailSender route */}
           <Route path="/admin/trips" element={<TripManagement/>} />
           <Route path="/trips" element={<Trip/>} />
+          <Route path="/virtual-tour" element={<VirtualTour />} />
         </Routes>
       </div>
     </Router>

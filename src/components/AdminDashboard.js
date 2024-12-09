@@ -73,7 +73,7 @@ function AdminDashboard() {
     // Create User
     const handleCreateUser = async () => {
         try {
-            const response = await fetch(`http://localhost:8080/api/auth/signup`, {
+            const response = await fetch(`https://indianculture-production.up.railway.app/api/auth/signup`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(newUser),
@@ -95,7 +95,7 @@ function AdminDashboard() {
     // Update User
     const handleUpdateUser = async (id) => {
         try {
-            const response = await fetch(`http://localhost:8080/api/auth/admin/users/${id}?username=${username}&password=${password}`, {
+            const response = await fetch(`https://indianculture-production.up.railway.app/api/auth/admin/users/${id}?username=${username}&password=${password}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ ...editingUser }),  // Password is not being sent now
@@ -117,7 +117,7 @@ function AdminDashboard() {
     // Delete User
     const handleDeleteUser = async (id) => {
         try {
-            const response = await fetch(`http://localhost:8080/api/auth/admin/users/${id}?username=${username}&password=${password}`, {
+            const response = await fetch(`https://indianculture-production.up.railway.app/api/auth/admin/users/${id}?username=${username}&password=${password}`, {
                 method: 'DELETE',
             });
             if (response.ok) {
@@ -135,7 +135,7 @@ function AdminDashboard() {
 
     const handleCreateQuiz = async () => {
         try {
-            const response = await fetch('http://localhost:8080/api/auth/admin/quizzes', {
+            const response = await fetch('https://indianculture-production.up.railway.app/api/auth/admin/quizzes', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(newQuiz)
@@ -160,7 +160,7 @@ function AdminDashboard() {
     // Update Quiz
     const handleUpdateQuiz = async (id) => {
         try {
-            const response = await fetch(`http://localhost:8080/api/auth/admin/quizzes/${id}`, {
+            const response = await fetch(`https://indianculture-production.up.railway.app/api/auth/admin/quizzes/${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(editingQuiz)
@@ -179,7 +179,7 @@ function AdminDashboard() {
     // Delete Quiz
     const handleDeleteQuiz = async (id) => {
         try {
-            const response = await fetch(`http://localhost:8080/api/auth/admin/quizzes/${id}`, { method: 'DELETE' });
+            const response = await fetch(`https://indianculture-production.up.railway.app/api/auth/admin/quizzes/${id}`, { method: 'DELETE' });
             if (response.ok) {
                 setSuccessMessage('Quiz deleted successfully');
                 setSnackbarOpen(true);

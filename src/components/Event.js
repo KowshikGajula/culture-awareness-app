@@ -91,7 +91,7 @@ const eventDetails = {
     timing: '3:00 PM - 5:00 PM',
     place: 'Bangalore',
     mode: 'Hybrid',
-    link: 'https://example.com/human-rights-day', // Online link for the event
+    link: 'https://www.youtube.com/watch?v=asWTOMU_9is', // Online link for the event
   },
   'Christmas Celebration': {
     description: 'Celebration of Christmas and holiday cheer.',

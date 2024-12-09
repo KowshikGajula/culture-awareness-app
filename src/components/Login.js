@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import ReCAPTCHA from 'react-google-recaptcha';
 import './Login.css';
 
+
 function Login({ onLogin }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -29,7 +30,7 @@ function Login({ onLogin }) {
 
     try {
       // Validate reCAPTCHA token with backend
-      const captchaResponse = await fetch('http://localhost:8080/api/recaptcha/validate', {
+      const captchaResponse = await fetch('https://indianculture-production.up.railway.app/api/recaptcha/validate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ token: captchaToken })
@@ -39,7 +40,7 @@ function Login({ onLogin }) {
       }
 
       const user = { username, password };
-      const response = await fetch('http://localhost:8080/api/auth/login', {
+      const response = await fetch('https://indianculture-production.up.railway.app/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(user),

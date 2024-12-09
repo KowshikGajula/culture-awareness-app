@@ -10,7 +10,7 @@ const EmailSender = () => {
 
     // Fetching all emails on component mount
     useEffect(() => {
-        axios.get('http://localhost:8080/admin/users/emails') // Fetch all emails
+        axios.get('https://indianculture-production.up.railway.app/admin/users/emails') // Fetch all emails
             .then((response) => {
                 setEmails(response.data); // Store emails from backend
             })
@@ -28,7 +28,7 @@ const EmailSender = () => {
             emails: emails, // Send all emails
         };
 
-        axios.post('http://localhost:8080/admin/send-email-to-all', payload) // Send to backend
+        axios.post('https://indianculture-production.up.railway.app/admin/send-email-to-all', payload) // Send to backend
             .then((response) => {
                 setResponseMessage('Email sent successfully!'); // Show success message
             })

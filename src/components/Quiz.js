@@ -16,7 +16,7 @@ function Quiz() {
     useEffect(() => {
         const fetchQuestions = async () => {
             try {
-                const response = await fetch('http://localhost:8080/api/auth/admin/quizzes');
+                const response = await fetch('https://indianculture-production.up.railway.app/api/auth/admin/quizzes');
                 if (response.ok) {
                     const data = await response.json();
                     setQuestions(data);
@@ -28,7 +28,7 @@ function Quiz() {
 
         const fetchPreviousResults = async () => {
             try {
-                const response = await fetch(`http://localhost:8080/api/auth/admin/results/${userId}`);
+                const response = await fetch(`https://indianculture-production.up.railway.app/api/auth/admin/results/${userId}`);
                 if (response.ok) {
                     const data = await response.json();
                     setPreviousResults(data);
@@ -70,7 +70,7 @@ function Quiz() {
         };
 
         try {
-            await fetch('http://localhost:8080/api/auth/admin/results', {
+            await fetch('https://indianculture-production.up.railway.app/api/auth/admin/results', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(resultData)
