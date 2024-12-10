@@ -79,11 +79,11 @@ const eventDetails = {
   },
   'World AIDS Day': {
     description: 'Awareness and support for people living with HIV.',
-    image: 'https://unimarckpharma.com/wp-content/uploads/2020/11/Unimarck_Pharma_World-AIDS-Day-Spreading-Awareness-about-HIV.jpg', // Replace with the image link for the event
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR42ONhGSc3gdEY3xLsZxF-aSVNC6ieag-1pg&s', // Replace with the image link for the event
     timing: '11:00 AM - 1:00 PM',
     place: 'Hyderabad',
     mode: 'Online',
-    link: 'https://example.com/world-aids-day', // Online link for the event
+    link: 'https://youtu.be/yjy2dQyhUiE?si=l6kaFnbZGsj1C4aT', // Online link for the event
   },
   'Human Rights Day': {
     description: 'Celebrating human rights achievements worldwide.',

@@ -39,7 +39,7 @@ function AdminDashboard() {
         }
 
         try {
-            const response = await fetch(`http://localhost:8080/api/auth/admin/users?username=${username}&password=${password}`);
+            const response = await fetch(`https://indianculture-production.up.railway.app/api/auth/admin/users?username=${username}&password=${password}`);
             if (response.ok) {
                 const data = await response.json();
                 setUsers(data);
@@ -55,7 +55,7 @@ function AdminDashboard() {
     // Fetch quizzes function
     const fetchQuizzes = useCallback(async () => {
         try {
-            const response = await fetch('http://localhost:8080/api/auth/admin/quizzes');
+            const response = await fetch('https://indianculture-production.up.railway.app/api/auth/admin/quizzes');
             if (response.ok) {
                 const data = await response.json();
                 setQuizzes(data);
