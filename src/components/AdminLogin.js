@@ -31,6 +31,9 @@ function AdminLogin() {
     return (
         <div className="admin-login-container"> {/* Unique class added here */}
             <h2>Admin Login</h2>
+            <p style={{ color: 'red', fontSize: '14px', marginBottom: '10px' }}>
+                For testing purposes, use username: <b>admin</b>, password: <b>Admin@123</b>. Please note: It is case and letter sensitive.
+            </p>
             <input 
                 type="text" 
                 placeholder="Admin Username" 
