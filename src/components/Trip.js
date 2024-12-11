@@ -6,7 +6,7 @@ const Trip = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        fetch('http://localhost:8080/admin/trips')
+        fetch('http://indianculture-production.up.railway.app/admin/trips')
             .then((response) => response.json())
             .then((data) => setTrips(data))
             .catch((error) => console.error('Error fetching trips:', error));
